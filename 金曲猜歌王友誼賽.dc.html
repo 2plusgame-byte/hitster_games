@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;800;900&family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: #EFE7DF; }
+  a { color: #8A5A1E; text-decoration: none; }
+  a:hover { color: #C97F0A; }
+  a:focus-visible { outline: 2px solid #F5A623; outline-offset: 2px; }
+  section[id] { scroll-margin-top: 56px; }
+</style>
+</helmet>
+
+<div style="max-width: 480px; margin: 0 auto; background: #FFFFFF; color: #3A2A1E; font-family: 'Archivo','Noto Sans TC',system-ui,sans-serif; font-size: 17px; line-height: 1.6; text-wrap: pretty; min-height: 100vh;">
+
+  <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 12px 20px; background: #3A2A1E; color: #FFFFFF;">
+    <span style="font-weight: 900; font-size: 15px;">2Plus 灣加遊戲</span>
+    <span style="font-size: 12px; font-weight: 800; letter-spacing: 0.14em; color: #F5A623;">參賽者須知</span>
+  </div>
+
+  <img src="assets/poster.jpg" alt="2026 金曲猜歌王友誼賽主視覺" style="display: block; width: 100%; height: auto;">
+
+  <div style="padding: 24px 20px 28px; border-bottom: 3px solid #3A2A1E;">
+    <div style="display: inline-block; padding: 5px 10px; background: #F5A623; color: #3A2A1E; font-size: 12px; font-weight: 900; letter-spacing: 0.14em;">2026 · 全台桌遊店預賽</div>
+    <h1 style="margin: 12px 0 0; font-weight: 900; font-size: 46px; line-height: 1.02; letter-spacing: -0.02em;">金曲猜歌王<br>友誼賽</h1>
+    <p style="margin: 16px 0 0; font-size: 20px; font-weight: 800; line-height: 1.4; color: #8A5A1E;">歌曲一放，回憶湧上 ——<br>誰才是真正的金曲王中王？</p>
+    <p style="margin: 12px 0 0; font-size: 16px; line-height: 1.6; color: #5C4534;">兩人一組，猜年代、猜歌手、猜歌名。從桌遊店預賽一路打進 12 月的台北冠軍賽。</p>
+  </div>
+
+  <div style="display: grid; grid-template-columns: 1fr 1fr;">
+    <div style="padding: 18px 20px; background: #F5A623; color: #3A2A1E; border-right: 3px solid #FFFFFF; border-bottom: 3px solid #FFFFFF;">
+      <div style="font-size: 11px; font-weight: 900; letter-spacing: 0.14em;">報名費</div>
+      <div style="font-weight: 900; font-size: 34px; line-height: 1.05; margin-top: 6px;">300<span style="font-size: 15px;"> 元</span></div>
+      <div style="font-size: 13px; font-weight: 600;">2 人一組／1 場</div>
+    </div>
+    <div style="padding: 18px 20px; background: #3A2A1E; color: #FFFFFF; border-bottom: 3px solid #FFFFFF;">
+      <div style="font-size: 11px; font-weight: 900; letter-spacing: 0.14em; color: #F5A623;">參賽年齡</div>
+      <div style="font-weight: 900; font-size: 34px; line-height: 1.05; margin-top: 6px;">12<span style="font-size: 15px;"> 歲以上</span></div>
+      <div style="font-size: 13px; color: #D8CCC1;">兩人皆需年滿 12 歲</div>
+    </div>
+    <div style="padding: 18px 20px; background: #3A2A1E; color: #FFFFFF; border-right: 3px solid #FFFFFF;">
+      <div style="font-size: 11px; font-weight: 900; letter-spacing: 0.14em; color: #F5A623;">預賽期間</div>
+      <div style="font-weight: 900; font-size: 25px; line-height: 1.1; margin-top: 6px;">9/25–11/22</div>
+      <div style="font-size: 13px; color: #D8CCC1;">各桌遊店舉辦</div>
+    </div>
+    <div style="padding: 18px 20px; background: #F5A623; color: #3A2A1E;">
+      <div style="font-size: 11px; font-weight: 900; letter-spacing: 0.14em;">冠軍賽</div>
+      <div style="font-weight: 900; font-size: 25px; line-height: 1.1; margin-top: 6px;">12/12 <span style="font-size: 14px;">(六)</span></div>
+      <div style="font-size: 13px; font-weight: 600;">13:00 台北</div>
+    </div>
+  </div>
+
+  <nav style="position: sticky; top: 0; z-index: 20; display: flex; overflow-x: auto; background: #3A2A1E; border-bottom: 3px solid #F5A623;">
+    <a href="#local" style="flex: 0 0 auto; padding: 13px 15px; font-size: 14px; font-weight: 800; color: #FFFFFF; white-space: nowrap;" style-hover="background: #F5A623; color: #3A2A1E">地方預賽</a>
+    <a href="#final" style="flex: 0 0 auto; padding: 13px 15px; font-size: 14px; font-weight: 800; color: #FFFFFF; white-space: nowrap;" style-hover="background: #F5A623; color: #3A2A1E">冠軍賽</a>
+    <a href="#signup" style="flex: 0 0 auto; padding: 13px 15px; font-size: 14px; font-weight: 800; color: #FFFFFF; white-space: nowrap;" style-hover="background: #F5A623; color: #3A2A1E">報名</a>
+    <a href="#refund" style="flex: 0 0 auto; padding: 13px 15px; font-size: 14px; font-weight: 800; color: #FFFFFF; white-space: nowrap;" style-hover="background: #F5A623; color: #3A2A1E">退費</a>
+    <a href="#notes" style="flex: 0 0 auto; padding: 13px 15px; font-size: 14px; font-weight: 800; color: #FFFFFF; white-space: nowrap;" style-hover="background: #F5A623; color: #3A2A1E">注意事項</a>
+    <a href="#rules" style="flex: 0 0 auto; padding: 13px 15px; font-size: 14px; font-weight: 800; color: #FFFFFF; white-space: nowrap;" style-hover="background: #F5A623; color: #3A2A1E">比賽規章</a>
+    <a href="#stores" style="flex: 0 0 auto; padding: 13px 15px; font-size: 14px; font-weight: 800; color: #FFFFFF; white-space: nowrap;" style-hover="background: #F5A623; color: #3A2A1E">參賽店家</a>
+  </nav>
+
+  <section id="local">
+    <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 16px; padding: 18px 20px 16px; background: #F5A623; color: #3A2A1E;">
+      <h2 style="margin: 0; font-weight: 900; font-size: 32px; line-height: 1.1;">地方預賽</h2>
+      <span style="font-weight: 900; font-size: 42px; line-height: 0.8; color: #FFFFFF;">01</span>
+    </div>
+    <div style="padding: 22px 20px 30px;">
+      <dl style="margin: 0; display: grid; grid-template-columns: 72px minmax(0, 1fr);">
+        <dt style="padding: 12px 0; border-top: 3px solid #3A2A1E; font-size: 13px; font-weight: 900; color: #8A6E58;">時間</dt>
+        <dd style="margin: 0; padding: 12px 0; border-top: 3px solid #3A2A1E; font-weight: 600;">2026 年 9 月 25 日 ~ 11 月 22 日</dd>
+        <dt style="padding: 12px 0; border-top: 2px solid #E6DED6; font-size: 13px; font-weight: 900; color: #8A6E58;">地點</dt>
+        <dd style="margin: 0; padding: 12px 0; border-top: 2px solid #E6DED6; font-weight: 600;">有舉辦之桌遊店（<a href="#stores">見參賽店家</a>）</dd>
+        <dt style="padding: 12px 0; border-top: 2px solid #E6DED6; font-size: 13px; font-weight: 900; color: #8A6E58;">報名費</dt>
+        <dd style="margin: 0; padding: 12px 0; border-top: 2px solid #E6DED6; font-weight: 600;">300 元 / 2 人一組 / 1 場<br><span style="font-size: 14px; font-weight: 400; color: #8A6E58;">參賽者需滿 12 歲</span></dd>
+      </dl>
+
+      <h3 style="margin: 26px 0 0; font-size: 13px; font-weight: 900; letter-spacing: 0.14em; color: #8A5A1E;">獎項</h3>
+      <p style="margin: 8px 0 0; font-size: 15px; color: #5C4534;">每 10 組參賽者產生一組冠軍。</p>
+
+      <div style="margin-top: 14px; border: 3px solid #3A2A1E;">
+        <div style="padding: 14px 16px; background: #F5A623; color: #3A2A1E; border-bottom: 3px solid #3A2A1E;">
+          <div style="font-size: 12px; font-weight: 900; letter-spacing: 0.14em;">冠軍</div>
+          <div style="margin-top: 4px; font-weight: 800;">《真心話不冒險》× 1<br>《喜新念舊》× 1<br>＋ 冠軍賽資格</div>
+        </div>
+        <div style="padding: 14px 16px; background: #FFF8EC;">
+          <div style="font-size: 12px; font-weight: 900; letter-spacing: 0.14em; color: #8A6E58;">參加獎</div>
+          <div style="margin-top: 4px; font-weight: 800;">每組 金曲 3D 列印 token × 2<span style="font-weight: 400; color: #8A6E58;">（一人一個）</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="final">
+    <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 16px; padding: 18px 20px 16px; background: #3A2A1E; color: #FFFFFF;">
+      <h2 style="margin: 0; font-weight: 900; font-size: 32px; line-height: 1.1;">冠軍賽</h2>
+      <span style="font-weight: 900; font-size: 42px; line-height: 0.8; color: #F5A623;">02</span>
+    </div>
+    <div style="padding: 22px 20px 30px;">
+      <div style="padding: 18px 20px; background: #F5A623; color: #3A2A1E;">
+        <div style="font-size: 12px; font-weight: 900; letter-spacing: 0.16em;">日期時間</div>
+        <div style="margin-top: 6px; font-weight: 900; font-size: 36px; line-height: 1.05;">12 / 12 <span style="font-size: 18px;">(六)</span></div>
+        <div style="font-weight: 800; font-size: 20px;">下午 13:00</div>
+      </div>
+
+      <dl style="margin: 22px 0 0; display: grid; grid-template-columns: 72px minmax(0, 1fr);">
+        <dt style="padding: 12px 0; border-top: 3px solid #3A2A1E; font-size: 13px; font-weight: 900; color: #8A6E58;">地點</dt>
+        <dd style="margin: 0; padding: 12px 0; border-top: 3px solid #3A2A1E; font-weight: 600;">Aroma Cafe Taipei 馨香堂咖啡<br>100 台北市中正區館前路 36 號 7 樓<br><span style="font-size: 14px; font-weight: 400; color: #8A6E58;">捷運台大醫院站步行 7 分鐘／台北車站步行 12 分鐘</span></dd>
+        <dt style="padding: 12px 0; border-top: 2px solid #E6DED6; font-size: 13px; font-weight: 900; color: #8A6E58;">資格</dt>
+        <dd style="margin: 0; padding: 12px 0; border-top: 2px solid #E6DED6; font-weight: 600;">任一預賽獲得冠軍賽資格之選手</dd>
+      </dl>
+
+      <h3 style="margin: 26px 0 0; font-size: 13px; font-weight: 900; letter-spacing: 0.14em; color: #8A5A1E;">獎項</h3>
+      <table style="margin-top: 12px; width: 100%; border-collapse: collapse; font-size: 15px;">
+        <tbody>
+          <tr>
+            <th style="text-align: left; padding: 12px 0; border-top: 3px solid #3A2A1E; width: 64px; font-weight: 900;">冠軍</th>
+            <td style="padding: 12px 0; border-top: 3px solid #3A2A1E;">任選 2Plus 灣加遊戲，額度 <strong>3,000 元</strong>內</td>
+          </tr>
+          <tr>
+            <th style="text-align: left; padding: 12px 0; border-top: 2px solid #E6DED6; font-weight: 900;">亞軍</th>
+            <td style="padding: 12px 0; border-top: 2px solid #E6DED6;">任選 2Plus 灣加遊戲，額度 <strong>2,000 元</strong>內</td>
+          </tr>
+          <tr>
+            <th style="text-align: left; padding: 12px 0; border-top: 2px solid #E6DED6; font-weight: 900;">季軍</th>
+            <td style="padding: 12px 0; border-top: 2px solid #E6DED6;">任選 2Plus 灣加遊戲，額度 <strong>1,500 元</strong>內</td>
+          </tr>
+          <tr>
+            <th style="text-align: left; padding: 12px 0; border-top: 2px solid #E6DED6; font-weight: 900;">殿軍</th>
+            <td style="padding: 12px 0; border-top: 2px solid #E6DED6;">《腦洞量表：大冒險》× 1＋《雙面特務》× 1</td>
+          </tr>
+        </tbody>
+      </table>
+      <p style="margin: 10px 0 0; font-size: 14px; color: #8A6E58;">遊戲額度超過者可補價差。</p>
+
+      <div style="margin-top: 20px; padding: 14px 16px; border-left: 8px solid #F5A623; background: #FFF8EC;">
+        <div style="font-size: 12px; font-weight: 900; letter-spacing: 0.14em; color: #8A5A1E;">現場加碼</div>
+        <p style="margin: 6px 0 0; font-size: 15px; font-weight: 600;">有冠軍賽資格的選手，可在冠軍賽現場以 <strong>75 折</strong>優惠價預購《金曲猜歌王 2》。</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="signup">
+    <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 16px; padding: 18px 20px 16px; background: #F5A623; color: #3A2A1E;">
+      <h2 style="margin: 0; font-weight: 900; font-size: 32px; line-height: 1.1;">報名方式</h2>
+      <span style="font-weight: 900; font-size: 42px; line-height: 0.8; color: #FFFFFF;">03</span>
+    </div>
+    <div style="padding: 22px 20px 30px;">
+      <ol style="list-style: none; margin: 0; padding: 0; display: grid;">
+        <li style="display: grid; grid-template-columns: 46px minmax(0, 1fr); gap: 12px; padding: 16px 0; border-top: 3px solid #3A2A1E;">
+          <span style="font-weight: 900; font-size: 28px; line-height: 1; color: #F5A623;">1</span>
+          <span><strong style="display: block; font-weight: 900;">先致電店家問名額</strong><span style="font-size: 15px; color: #5C4534;">避免報名額滿，也方便店家統計人數。</span></span>
+        </li>
+        <li style="display: grid; grid-template-columns: 46px minmax(0, 1fr); gap: 12px; padding: 16px 0; border-top: 2px solid #E6DED6;">
+          <span style="font-weight: 900; font-size: 28px; line-height: 1; color: #F5A623;">2</span>
+          <span><strong style="display: block; font-weight: 900;">到店辦理報名並繳費</strong><span style="font-size: 15px; color: #5C4534;">請洽各比賽店家辦理，<strong>繳交報名費才算完成手續</strong>。</span></span>
+        </li>
+        <li style="display: grid; grid-template-columns: 46px minmax(0, 1fr); gap: 12px; padding: 16px 0; border-top: 2px solid #E6DED6; border-bottom: 2px solid #E6DED6;">
+          <span style="font-weight: 900; font-size: 28px; line-height: 1; color: #F5A623;">3</span>
+          <span><strong style="display: block; font-weight: 900;">賽前 3 天確認成賽</strong><span style="font-size: 15px; color: #5C4534;">向店家確認是否成賽與報到時間，並於賽前 30 分鐘完成報到。</span></span>
+        </li>
+      </ol>
+      <ul style="margin: 20px 0 0; padding: 0 0 0 18px; font-size: 15px; color: #5C4534; display: grid; gap: 8px;">
+        <li>比賽當天可以現場報名；若店家報名人數額滿，比賽當日不開放現場報名。</li>
+        <li>若臨時決定不參賽，請致電店家將名額讓出給其他選手。</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="refund">
+    <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 16px; padding: 18px 20px 16px; background: #3A2A1E; color: #FFFFFF;">
+      <h2 style="margin: 0; font-weight: 900; font-size: 32px; line-height: 1.1;">取消與退費</h2>
+      <span style="font-weight: 900; font-size: 42px; line-height: 0.8; color: #F5A623;">04</span>
+    </div>
+    <div style="padding: 22px 20px 30px;">
+      <p style="margin: 0; font-size: 15px; color: #5C4534;">報名完成後如欲取消，向報名店家提出申請，依申請時間退費：</p>
+      <div style="margin-top: 18px;">
+        <div style="display: grid; grid-template-columns: minmax(0, 1fr) 110px; gap: 12px; align-items: baseline; padding: 14px 0; border-top: 3px solid #3A2A1E;">
+          <span style="font-weight: 700;">活動開始 <strong>10 天前</strong></span>
+          <span style="font-weight: 900; color: #8A5A1E;">全額退還</span>
+        </div>
+        <div style="display: grid; grid-template-columns: minmax(0, 1fr) 110px; gap: 12px; align-items: baseline; padding: 14px 0; border-top: 2px solid #E6DED6;">
+          <span style="font-weight: 700;">前 <strong>9 天</strong>至前 <strong>2 天</strong>內</span>
+          <span style="font-weight: 900; color: #8A5A1E;">扣 10% 後退回</span>
+        </div>
+        <div style="display: grid; grid-template-columns: minmax(0, 1fr) 110px; gap: 12px; align-items: baseline; padding: 14px 0; border-top: 2px solid #E6DED6; border-bottom: 2px solid #E6DED6;">
+          <span style="font-weight: 700;">之後申請／無正當理由缺席</span>
+          <span style="font-weight: 900; color: #8A6E58;">恕不退費</span>
+        </div>
+      </div>
+      <p style="margin: 14px 0 0; font-size: 15px; color: #5C4534;">店家賽若未達最低參賽人數，或因不可抗力導致無法順利舉行，將全額退還報名費。</p>
+    </div>
+  </section>
+
+  <section id="notes">
+    <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 16px; padding: 18px 20px 16px; background: #F5A623; color: #3A2A1E;">
+      <h2 style="margin: 0; font-weight: 900; font-size: 32px; line-height: 1.1;">注意事項</h2>
+      <span style="font-weight: 900; font-size: 42px; line-height: 0.8; color: #FFFFFF;">05</span>
+    </div>
+    <div style="padding: 22px 20px 30px;">
+      <ul style="list-style: none; margin: 0; padding: 0;">
+        <li style="padding: 14px 0; border-top: 3px solid #3A2A1E; font-size: 16px;">請參賽者在<strong>賽前三天</strong>與店家確認是否成賽，並確認比賽報到時間（以店家公告時間為主）。</li>
+        <li style="padding: 14px 0; border-top: 2px solid #E6DED6; font-size: 16px;">請於比賽前 <strong>30 分鐘</strong>完成報到；逾時未到場簽到將取消比賽資格，且不退還報名費。</li>
+        <li style="padding: 14px 0; border-top: 2px solid #E6DED6; font-size: 16px;">參賽者若已在其他店家賽取得冠軍，最遲應在<strong>賽前 1 小時</strong>告知店家。同時擁有多間店家賽冠軍時，採<strong>比賽日期最早</strong>者的冠軍賽資格，其餘店家賽資格順延遞補至亞軍；若亞軍無法參賽，則該店冠軍賽資格從缺。</li>
+        <li style="padding: 14px 0; border-top: 2px solid #E6DED6; font-size: 16px;">比賽將全程拍照及錄影，參加比賽視同同意 2Plus 灣加遊戲在網路及平面媒體使用比賽過程中取得的圖像及肖像。</li>
+        <li style="padding: 14px 0; border-top: 2px solid #E6DED6; border-bottom: 2px solid #E6DED6; font-size: 16px;">2Plus 灣加遊戲對本活動擁有更改與最終解釋權。</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="rules">
+    <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 16px; padding: 18px 20px 16px; background: #3A2A1E; color: #FFFFFF;">
+      <h2 style="margin: 0; font-weight: 900; font-size: 32px; line-height: 1.1;">比賽規章</h2>
+      <span style="font-weight: 900; font-size: 42px; line-height: 0.8; color: #F5A623;">06</span>
+    </div>
+    <div style="padding: 22px 20px 30px;">
+      <p style="margin: 0; font-size: 17px; font-weight: 800;">以兩人一組組隊方式進行團體玩法。</p>
+
+      <h3 style="margin: 26px 0 0; padding-top: 12px; border-top: 3px solid #3A2A1E; font-size: 13px; font-weight: 900; letter-spacing: 0.14em; color: #8A5A1E;">店家預賽 · 桌次</h3>
+      <div style="margin-top: 12px; display: grid; gap: 12px;">
+        <div style="padding: 14px 16px; background: #FFF8EC; border-left: 8px solid #F5A623;">
+          <div style="font-weight: 900; font-size: 19px;">8–10 組</div>
+          <p style="margin: 6px 0 0; font-size: 15px; color: #5C4534;">以一桌進行 1 場比賽，回合數＝組數（例如共 8 組即進行 8 個回合）。抽籤決定位置，1 號為起始玩家。</p>
+        </div>
+        <div style="padding: 14px 16px; background: #FFF8EC; border-left: 8px solid #F5A623;">
+          <div style="font-weight: 900; font-size: 19px;">11–20 組</div>
+          <p style="margin: 6px 0 0; font-size: 15px; color: #5C4534;">抽籤決定桌次及位置，分成兩桌進行 1 場比賽，1 號為起始玩家。每桌回合數＝該桌組數（A 桌 6 組打 6 回合、B 桌 5 組打 5 回合）。</p>
+        </div>
+      </div>
+
+      <h3 style="margin: 26px 0 0; padding-top: 12px; border-top: 3px solid #3A2A1E; font-size: 13px; font-weight: 900; letter-spacing: 0.14em; color: #8A5A1E;">冠軍賽 · 兩輪制</h3>
+      <div style="margin-top: 12px;">
+        <div style="display: grid; grid-template-columns: 62px minmax(0, 1fr); gap: 12px; padding: 14px 0; border-top: 2px solid #E6DED6;">
+          <span style="font-weight: 900; color: #8A5A1E;">第一輪</span>
+          <span style="font-size: 15px;">根據人數平均分成數桌進行 1 場比賽，每位參賽者抽籤決定桌次與號碼。</span>
+        </div>
+        <div style="display: grid; grid-template-columns: 62px minmax(0, 1fr); gap: 12px; padding: 14px 0; border-top: 2px solid #E6DED6; border-bottom: 2px solid #E6DED6;">
+          <span style="font-weight: 900; color: #8A5A1E;">第二輪</span>
+          <span style="font-size: 15px;">取第一輪分數最高的前 10 組晉級，依分數高低安排號碼 —— 最高分為 1 號，最低分為 10 號。</span>
+        </div>
+      </div>
+
+      <h3 style="margin: 26px 0 0; padding-top: 12px; border-top: 3px solid #3A2A1E; font-size: 13px; font-weight: 900; letter-spacing: 0.14em; color: #8A5A1E;">比賽進行方式</h3>
+      <ol style="margin: 12px 0 0; padding: 0 0 0 22px; display: grid; gap: 10px; font-size: 16px;">
+        <li>播放歌曲範圍皆為<strong>中文歌</strong>，但不限於《金曲猜歌王》之歌單，由現場店家播放。</li>
+        <li>開賽前 30 分鐘確認報到狀況，並抽籤決定座位順序 1–10 號，1 號為起始玩家。</li>
+        <li>每組玩家拿到一組下注代表物（兩個相同號碼）、一枝筆，以及一份作答紙；桌面中央擺放一張初始年代卡。</li>
+        <li>第一首歌由 1 號組別擔任起始玩家，先下注時間位置，其他組別按<strong>順時針</strong>輪流下注，並在作答紙上<strong>秘密</strong>寫下正確的歌手及歌名。</li>
+        <li>每首歌曲<strong>隨機播放 30 秒</strong>，最多播放兩遍。</li>
+        <li>待所有組別完成下注及作答後，同時公開作答紙，之後公布正確答案。</li>
+        <li>接著播放第二首歌，起始玩家換成 2 號組別，重複以上步驟，直到所有組別都擔任過一次起始玩家。</li>
+        <li>比賽結束結算所有組別分數，分數最高組別為冠軍。</li>
+      </ol>
+
+      <h3 style="margin: 26px 0 0; padding-top: 12px; border-top: 3px solid #3A2A1E; font-size: 13px; font-weight: 900; letter-spacing: 0.14em; color: #8A5A1E;">計分</h3>
+      <div style="margin-top: 12px; display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+        <div style="padding: 14px 16px; background: #F5A623; color: #3A2A1E;">
+          <div style="font-weight: 900; font-size: 34px; line-height: 1;">2<span style="font-size: 14px;"> 分</span></div>
+          <div style="margin-top: 6px; font-size: 15px; font-weight: 800;">歌曲時間正確</div>
+        </div>
+        <div style="padding: 14px 16px; background: #3A2A1E; color: #FFFFFF;">
+          <div style="font-weight: 900; font-size: 34px; line-height: 1; color: #F5A623;">1<span style="font-size: 14px; color: #FFFFFF;"> 分</span></div>
+          <div style="margin-top: 6px; font-size: 15px; font-weight: 800;">歌手與歌名都正確</div>
+        </div>
+      </div>
+      <p style="margin: 12px 0 0; font-size: 15px; color: #5C4534;">歌曲時間錯誤但歌手歌名正確，仍可得 1 分；歌手或歌名其中一個錯誤，則無法得分。</p>
+
+      <h3 style="margin: 26px 0 0; padding-top: 12px; border-top: 3px solid #3A2A1E; font-size: 13px; font-weight: 900; letter-spacing: 0.14em; color: #8A5A1E;">平手怎麼辦</h3>
+      <p style="margin: 10px 0 0; font-size: 15px; color: #5C4534;">平分的兩組加碼一首歌進行搶答，依序判定：</p>
+      <ol style="margin: 12px 0 0; padding: 0 0 0 22px; display: grid; gap: 8px; font-size: 16px;">
+        <li>播放後<strong>搶先寫下年代</strong>（不寫歌手歌名）並公布。</li>
+        <li>先答對者獲勝。</li>
+        <li>如果兩方都錯，看誰的年代較近。</li>
+        <li>如果兩方年代差距相同，則看誰先完成作答。</li>
+      </ol>
+    </div>
+  </section>
+
+  <sc-if value="{{ showStores }}" hint-placeholder-val="{{ true }}">
+    <section id="stores">
+      <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 16px; padding: 18px 20px 16px; background: #F5A623; color: #3A2A1E;">
+        <h2 style="margin: 0; font-weight: 900; font-size: 32px; line-height: 1.1;">參賽店家</h2>
+        <span style="font-weight: 900; font-size: 42px; line-height: 0.8; color: #FFFFFF;">07</span>
+      </div>
+      <div style="padding: 22px 20px 30px;">
+        <p style="margin: 0; font-size: 15px; color: #5C4534;">預賽於全台合作桌遊店舉辦，報名請直接洽詢店家。</p>
+        <div style="margin-top: 18px; padding: 20px 16px; border: 3px dashed #C8B8A8; background: #FFF8EC;">
+          <div style="font-family: ui-monospace, Menlo, monospace; font-size: 12px; letter-spacing: 0.08em; color: #8A6E58;">STORE LIST — 待補</div>
+          <p style="margin: 8px 0 0; font-size: 15px; color: #5C4534;">把店家名單（店名／地區／電話／預賽日期）給我，我就換成可點擊撥號的清單。</p>
+        </div>
+      </div>
+    </section>
+  </sc-if>
+
+  <section style="padding: 32px 20px 40px; background: #3A2A1E; color: #FFFFFF;">
+    <div style="display: inline-block; padding: 5px 10px; background: #F5A623; color: #3A2A1E; font-size: 12px; font-weight: 900; letter-spacing: 0.14em;">下一步</div>
+    <h2 style="margin: 12px 0 0; font-weight: 900; font-size: 32px; line-height: 1.12;">找一間店，<br>報名友誼賽。</h2>
+    <p style="margin: 12px 0 0; font-size: 16px; color: #E8DED4;">最新場次、參賽店家與冠軍賽消息，都在 2Plus 灣加遊戲官方粉絲頁。</p>
+    <a href="{{ fbUrl }}" target="_blank" rel="noopener" style="display: block; margin-top: 20px; padding: 16px 18px; background: #F5A623; color: #3A2A1E; font-weight: 900; font-size: 17px;" style-hover="background: #FFFFFF">前往 2Plus 灣加遊戲 粉絲頁 →</a>
+    <div style="margin-top: 28px; padding-top: 16px; border-top: 2px solid #5C4534; font-size: 13px; color: #C8B8A8;">2Plus 灣加遊戲 · 2026 金曲猜歌王友誼賽 · 參賽者須知</div>
+  </section>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;showStores&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;內容&quot;},&quot;fbUrl&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;https://www.facebook.com/2plus.tw&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;內容&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      showStores: this.props.showStores ?? true,
+      fbUrl: this.props.fbUrl || "https://www.facebook.com/2plus.tw"
+    };
+  }
+}
+</script>
+</body>
+</html>
