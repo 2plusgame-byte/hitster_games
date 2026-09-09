@@ -50,6 +50,8 @@
     display: flex; align-items: center; justify-content: space-between; gap: 12px;
     padding: 12px 20px; background: var(--brown); color: #fff;
   }
+  .topbar .brand { display: flex; align-items: center; gap: 8px; }
+  .topbar .logo { width: 28px; height: 28px; border-radius: 50%; display: block; }
   .topbar b { font-weight: 900; font-size: 15px; }
   .topbar span { font-size: 12px; font-weight: 800; letter-spacing: .14em; color: var(--yellow); }
 
@@ -114,7 +116,7 @@
   dl.spec .note { font-size: 14px; font-weight: 400; color: var(--muted); }
 
   h3.kicker {
-    margin-top: 26px; font-size: 13px; font-weight: 900; letter-spacing: .14em; color: var(--gold);
+    margin-top: 26px; font-size: 18px; font-weight: 900; letter-spacing: .1em; color: var(--gold);
   }
   h3.kicker.ruled { padding-top: 12px; border-top: 3px solid var(--brown); }
   .p { margin-top: 8px; font-size: 15px; color: var(--ink); }
@@ -255,7 +257,10 @@
 <div class="page">
 
   <div class="topbar">
-    <b>2Plus 灣加遊戲</b>
+    <div class="brand">
+      <img class="logo" src="assets/logo.jpg" alt="2Plus 灣加遊戲 Logo">
+      <b>2Plus 灣加遊戲</b>
+    </div>
     <span>參賽者須知</span>
   </div>
 
@@ -402,11 +407,11 @@
       </div>
 
       <h3 class="kicker ruled">賽前準備</h3>
-      <p class="p">所有組別按照編號順序<strong>順時針</strong>入座，桌面中央放置起始年代卡；編號卡 1 號的小組拿取起始標記。每組參賽者拿取以下物品：</p>
+      <p class="p">所有組別按照編號順序<strong>順時針</strong>入座，桌面中央放置&nbsp;<span style="color: rgb(194, 19, 95); font-weight: 900;">A&nbsp;</span><span>起始年代卡；編號卡 1 號的小組拿取&nbsp;</span><span style="color: rgb(194, 19, 95); font-weight: 900;">B&nbsp;</span><span>起始標記。每組參賽者拿取以下物品：</span></p>
       <div class="kit">
-        <div class="r"><span class="a">A</span><span>兩張同號的小組編號卡</span></div>
-        <div class="r"><span class="a">B</span><span>一枝筆</span></div>
-        <div class="r"><span class="a">C</span><span>一張作答紙</span></div>
+        <div class="r"><span class="a">Ｃ</span><span>兩張同號的小組編號卡</span></div>
+        <div class="r"><span class="a">Ｄ</span><span>一枝筆</span></div>
+        <div class="r"><span class="a">Ｅ</span><span>一張作答紙</span></div>
       </div>
       <img class="figimg" src="assets/賽前配置示意圖.jpg" alt="賽前配置示意：桌面中央放置起始年代卡，四組分別拿取編號卡與作答紙筆">
 
@@ -506,7 +511,7 @@
       </dl>
 
       <h3 class="kicker">獎項</h3>
-      <p class="p">每 10 組參賽者產生一組冠軍。</p>
+      <p class="p">金曲猜歌王</p>
 
       <div class="prizebox">
         <div class="win">
@@ -550,7 +555,7 @@
     <h2>找一間店，<br>報名友誼賽。</h2>
     <p>場次、報名與規則相關問題，歡迎直接用 LINE＠ 詢問 2Plus 灣加遊戲。</p>
     <a class="cta" href="https://line.me/R/ti/p/@vhd0734q" target="_blank" rel="noopener">有問題請聯繫我們（LINE＠） →</a>
-    <div class="id">LINE＠ @vhd0734q</div>
+    <div class="id">LINE＠vhd0734q</div>
     <div class="foot">2Plus 灣加遊戲 · 2026 金曲猜歌王友誼賽 · 參賽者須知</div>
   </section>
 
