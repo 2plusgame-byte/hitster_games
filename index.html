@@ -245,6 +245,33 @@
   .outro .cta:hover { background: #fff; color: var(--brown); }
   .outro .id { margin-top: 10px; font-family: ui-monospace, Menlo, monospace; font-size: 12px; letter-spacing: .08em; color: #B5B5B5; }
   .outro .foot { margin-top: 28px; padding-top: 16px; border-top: 2px solid #3A3A3A; font-size: 13px; color: #B5B5B5; }
+  .tl .slot { display: grid; grid-template-columns: 104px minmax(0,1fr); gap: 12px; padding: 13px 0; border-top: 2px solid var(--line); align-items: baseline; }
+  .tl .slot:first-child { border-top: 3px solid var(--brown); }
+  .tl .slot:last-child { border-bottom: 2px solid var(--line); }
+  .tl .tm { font-weight: 900; font-size: 15px; color: var(--gold); font-variant-numeric: tabular-nums; }
+  .tl .ev { font-weight: 900; font-size: 17px; }
+  .tl .ev small { display: block; font-size: 14px; font-weight: 600; color: var(--muted); }
+  .tl .slot.rest .ev { color: var(--muted); font-weight: 700; font-size: 16px; }
+  .funnel { display: grid; grid-template-columns: 1fr 24px 1fr 24px 1fr; align-items: center; margin-top: 12px; text-align: center; }
+  .funnel .b { padding: 12px 4px; border: 3px solid var(--brown); }
+  .funnel .b.on { background: var(--yellow); }
+  .funnel .b.dk { background: var(--brown); color: #fff; }
+  .funnel .b.dk .v { color: var(--yellow); }
+  .funnel .v { font-weight: 900; font-size: 26px; line-height: 1; }
+  .funnel .v small { font-size: 13px; }
+  .funnel .l { margin-top: 4px; font-size: 12px; font-weight: 800; letter-spacing: .06em; }
+  .funnel .ar { font-weight: 900; font-size: 18px; color: var(--gold); }
+  .rounds { margin-top: 12px; display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .rounds > div { padding: 14px 14px 12px; background: var(--cream); border-top: 6px solid var(--yellow); }
+  .rounds > div.dk { background: var(--brown); color: #fff; border-top-color: var(--yellow); }
+  .rounds .t { font-weight: 900; font-size: 20px; }
+  .rounds .tm { font-size: 13px; font-weight: 800; color: var(--gold); }
+  .rounds .dk .tm { color: var(--yellow); }
+  .rounds ul { margin-top: 8px; padding-left: 16px; display: grid; gap: 4px; font-size: 14px; }
+  .tie { margin-top: 14px; padding: 14px 16px; border: 3px solid var(--brown); }
+  .tie .k { font-size: 12px; font-weight: 900; letter-spacing: .14em; color: var(--gold); }
+  .tie .v { margin-top: 4px; font-weight: 800; }
+  .tie .p { margin-top: 4px; }
 </style>
 </head>
 <body>
@@ -314,7 +341,7 @@
       <div class="callout">
         <div class="k">日期時間</div>
         <div class="big">12 / 12 <small>(六)</small></div>
-        <div class="time">下午 13:00</div>
+        <div class="time">13:00 報到・13:45 開賽</div>
       </div>
 
       <dl class="spec" style="margin-top: 22px;">
@@ -324,7 +351,73 @@
         <dd>各場預賽冠軍選手</dd>
       </dl>
 
-      <h3 class="kicker">獎項</h3>
+      <h3 class="kicker ruled">賽程</h3>
+      <div class="tl" style="margin-top:12px;">
+        <div class="slot rest"><span class="tm">13:00–13:30</span><span class="ev">報到</span></div>
+        <div class="slot rest"><span class="tm">13:30–13:45</span><span class="ev">規則解說</span></div>
+        <div class="slot"><span class="tm">13:45–14:45</span><span class="ev">準決賽<small>30 組・10 題</small></span></div>
+        <div class="slot rest"><span class="tm">14:45–15:00</span><span class="ev">中場休息</span></div>
+        <div class="slot"><span class="tm">15:00–16:00</span><span class="ev">決賽<small>10 組・10 題</small></span></div>
+      </div>
+      <div class="funnel">
+        <div class="b"><div class="v">30<small> 組</small></div><div class="l">準決賽</div></div>
+        <div class="ar">→</div>
+        <div class="b on"><div class="v">10<small> 組</small></div><div class="l">決賽</div></div>
+        <div class="ar">→</div>
+        <div class="b dk"><div class="v">4<small> 組</small></div><div class="l">頒獎</div></div>
+      </div>
+
+      <h3 class="kicker ruled">每題流程</h3>
+      <div class="flow">
+        <span>1 播放歌曲</span>
+        <span>2 秘密作答</span>
+        <span>3 時間到停筆</span>
+        <span>4 公布答案</span>
+      </div>
+      <ol class="plain">
+        <li>每組領取一張作答紙，主持人播放歌曲。</li>
+        <li>根據聽到的歌曲，在作答紙上<strong>秘密</strong>寫下：<strong>① 發行區間</strong>（落在場上哪兩張時間卡之間）、<strong>② 歌手＋歌名</strong>。</li>
+        <li>主持人宣布時間到，所有組別停止作答。</li>
+        <li>公布正確答案，由裁判紀錄各組分數。</li>
+      </ol>
+
+      <h3 class="kicker ruled">計分方式</h3>
+      <div class="score">
+        <div class="a"><div class="num">+2<small> 分</small></div><div class="l">發行區間正確</div></div>
+        <div class="b"><div class="num">+1<small> 分</small></div><div class="l">歌手＋歌名正確</div></div>
+      </div>
+      <p class="fine">每題最高 3 分，準決賽與決賽計分相同。</p>
+
+      <h3 class="kicker ruled">準決賽與決賽</h3>
+      <div class="rounds">
+        <div>
+          <div class="tm">13:45–14:45</div>
+          <div class="t">準決賽</div>
+          <ul>
+            <li>30 組參賽</li>
+            <li>共 10 題</li>
+            <li>場上初始 <strong>3 張</strong>時間卡</li>
+            <li>總分<strong>前 10 名</strong>晉級</li>
+          </ul>
+        </div>
+        <div class="dk">
+          <div class="tm">15:00–16:00</div>
+          <div class="t">決賽</div>
+          <ul>
+            <li>10 組參賽</li>
+            <li>共 10 題</li>
+            <li>場上初始 <strong>4 張</strong>時間卡</li>
+            <li>總分<strong>前 4 名</strong>頒獎</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tie">
+        <div class="k">平手處理</div>
+        <div class="v">搶答題 × 1</div>
+        <p class="p">準決賽晉級名額出現同分時，以一題搶答題決定晉級。</p>
+      </div>
+
+      <h3 class="kicker ruled">獎項</h3>
       <table class="prizes">
         <tbody>
           <tr><th>冠軍</th><td>2Plus 灣加遊戲購物金<strong>3,000 元</strong></td></tr>
