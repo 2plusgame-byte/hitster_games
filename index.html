@@ -279,6 +279,11 @@
   .phase .ph .t { font-weight: 900; font-size: 24px; }
   .phase .ph .tm { font-weight: 900; font-size: 15px; }
   .phase .kicker { margin-top: 20px; font-size: 16px; }
+  .session .done { display: inline-block; margin-left: 6px; padding: 1px 7px; background: var(--brown); color: #fff; font-size: 12px; font-weight: 900; letter-spacing: .08em; vertical-align: 2px; }
+  .session.past { background: #F7F3F5; border-color: #BDB3B8; }
+  .session.past .d { color: var(--muted); }
+  .session .btn.off { background: #DDD5D9; color: var(--muted); cursor: default; }
+  .session .btn.off:hover { background: #DDD5D9; color: var(--muted); }
 </style>
 </head>
 <body>
@@ -360,7 +365,7 @@
 
       <h3 class="kicker ruled">時間表</h3>
       <div class="tl" style="margin-top:12px;">
-        <div class="slot rest"><span class="tm">13:00–13:30</span><span class="ev">選手報到</span></div>
+        <div class="slot rest"><span class="tm">13:00–13:30</span><span class="ev">選手報到<small>逾時報到視為棄權</small></span></div>
         <div class="slot rest"><span class="tm">13:30–13:45</span><span class="ev">規則解說</span></div>
         <div class="slot"><span class="tm">13:45–14:45</span><span class="ev">準決賽<small>30 組・10 題</small></span></div>
         <div class="slot"><span class="tm">15:00–16:00</span><span class="ev">決賽<small>10 組・10 題</small></span></div>
@@ -379,7 +384,7 @@
         <h3 class="kicker">設置</h3>
         <p class="p">初始場上已有 <strong>3 張</strong>時間卡。每組會拿到：</p>
         <div class="kit">
-          <div class="r"><span class="a">１</span><span>編號卡</span></div>
+          <div class="r"><span class="a">１</span><span>組別編號卡</span></div>
           <div class="r"><span class="a">２</span><span>作答紙</span></div>
           <div class="r"><span class="a">３</span><span>一枝筆</span></div>
         </div>
@@ -649,159 +654,159 @@
 
       <h3 class="kicker">場次清單</h3>
       <div class="sessions">
-        <div class="session">
+        <div class="session past">
           <div>
             <div class="d">9 / 25 <small>(五) 14:00</small></div>
-            <div class="v"><a href="https://maps.app.goo.gl/i5THyastr4BktAuT8" target="_blank" rel="noopener">台北新銳2Plus攤位（台北）</a></div>
+            <div class="v"><a href="https://maps.app.goo.gl/i5THyastr4BktAuT8" target="_blank" rel="noopener">台北新銳2Plus攤位（台北）</a><span class="done">已完成</span></div>
           </div>
-          <a class="btn" href="https://line.me/R/ti/p/@vhd0734q" target="_blank" rel="noopener">報名</a>
+          <span class="btn off">已結束</span>
         </div>
-        <div class="session">
+        <div class="session past">
           <div>
             <div class="d">9 / 26 <small>(六) 14:00</small></div>
-            <div class="v"><a href="https://maps.app.goo.gl/i5THyastr4BktAuT8" target="_blank" rel="noopener">台北新銳2Plus攤位（台北）</a></div>
+            <div class="v"><a href="https://maps.app.goo.gl/i5THyastr4BktAuT8" target="_blank" rel="noopener">台北新銳2Plus攤位（台北）</a><span class="done">已完成</span></div>
           </div>
-          <a class="btn" href="https://line.me/R/ti/p/@vhd0734q" target="_blank" rel="noopener">報名</a>
+          <span class="btn off">已結束</span>
         </div>
-        <div class="session">
+        <div class="session past">
           <div>
             <div class="d">9 / 27 <small>(日) 13:30</small></div>
-            <div class="v"><a href="https://maps.app.goo.gl/WKt1nEFuq8BXQyX68" target="_blank" rel="noopener">桌覓桌遊休閒空間（高雄）</a></div>
+            <div class="v"><a href="https://maps.app.goo.gl/WKt1nEFuq8BXQyX68" target="_blank" rel="noopener">桌覓桌遊休閒空間（高雄）</a><span class="done">已完成</span></div>
           </div>
-          <a class="btn" href="https://www.facebook.com/profile.php?id=61590676741985" target="_blank" rel="noopener">報名</a>
+          <span class="btn off">已結束</span>
         </div>
-        <div class="session">
+        <div class="session past">
           <div>
             <div class="d">9 / 27 <small>(日) 19:00</small></div>
-            <div class="v"><a href="https://maps.app.goo.gl/aM8kxHgc4J6pJmut5" target="_blank" rel="noopener">永和紙盒子桌遊（新北）</a></div>
+            <div class="v"><a href="https://maps.app.goo.gl/aM8kxHgc4J6pJmut5" target="_blank" rel="noopener">永和紙盒子桌遊（新北）</a><span class="done">已完成</span></div>
           </div>
-          <a class="btn" href="https://www.facebook.com/profile.php?id=100057364393517" target="_blank" rel="noopener">報名</a>
+          <span class="btn off">已結束</span>
         </div>
-        <div class="session">
+        <div class="session past">
           <div>
             <div class="d">10 / 3 <small>(六) 18:30</small></div>
-            <div class="v"><a href="https://maps.app.goo.gl/41T75XRMzoFipeM6A" target="_blank" rel="noopener">桌遊地下城（台北）</a></div>
+            <div class="v"><a href="https://maps.app.goo.gl/41T75XRMzoFipeM6A" target="_blank" rel="noopener">桌遊地下城（台北）</a><span class="done">已完成</span></div>
           </div>
-          <a class="btn" href="https://lin.ee/vLtkQsH" target="_blank" rel="noopener">報名</a>
+          <span class="btn off">已結束</span>
         </div>
-        <div class="session">
+        <div class="session past">
           <div>
             <div class="d">10 / 6 <small>(二) 19:00</small></div>
-            <div class="v"><a href="https://maps.app.goo.gl/zNxkL3EwCXZCqfFE8" target="_blank" rel="noopener">AS基地（玩藝空間）（台北）</a></div>
+            <div class="v"><a href="https://maps.app.goo.gl/zNxkL3EwCXZCqfFE8" target="_blank" rel="noopener">AS基地（玩藝空間）（台北）</a><span class="done">已完成</span></div>
           </div>
-          <a class="btn" href="mailto:yping0937@gmail.com">報名</a>
+          <span class="btn off">已結束</span>
         </div>
-        <div class="session">
+        <div class="session past">
           <div>
             <div class="d">10 / 10 <small>(六) 15:00</small></div>
-            <div class="v"><a href="https://maps.app.goo.gl/wMUudKidYS5wEWDNA" target="_blank" rel="noopener">小桌弄美河店（新北）</a></div>
+            <div class="v"><a href="https://maps.app.goo.gl/wMUudKidYS5wEWDNA" target="_blank" rel="noopener">小桌弄美河店（新北）</a><span class="done">已完成</span></div>
           </div>
-          <a class="btn" href="https://www.facebook.com/DrawNowKids" target="_blank" rel="noopener">報名</a>
+          <span class="btn off">已結束</span>
         </div>
-        <div class="session">
+        <div class="session past">
           <div>
             <div class="d">10 / 11 <small>(日) 13:30</small></div>
-            <div class="v"><a href="https://maps.app.goo.gl/SsVU2WAsoJWbSeSc6" target="_blank" rel="noopener">卡牌屋（台北）</a></div>
+            <div class="v"><a href="https://maps.app.goo.gl/SsVU2WAsoJWbSeSc6" target="_blank" rel="noopener">卡牌屋（台北）</a><span class="done">已完成</span></div>
           </div>
-          <a class="btn" href="https://www.facebook.com/bghut" target="_blank" rel="noopener">報名</a>
+          <span class="btn off">已結束</span>
         </div>
-        <div class="session">
+        <div class="session past">
           <div>
             <div class="d">10 / 15 <small>(四) 19:00</small></div>
-            <div class="v"><a href="https://maps.app.goo.gl/6dzVd8BwyNwE9jcf6" target="_blank" rel="noopener">夏洛克桌遊（台北）</a></div>
+            <div class="v"><a href="https://maps.app.goo.gl/6dzVd8BwyNwE9jcf6" target="_blank" rel="noopener">夏洛克桌遊（台北）</a><span class="done">已完成</span></div>
           </div>
-          <a class="btn" href="https://www.facebook.com/SherlockBoardGamestore" target="_blank" rel="noopener">報名</a>
+          <span class="btn off">已結束</span>
         </div>
-        <div class="session">
+        <div class="session past">
           <div>
             <div class="d">10 / 17 <small>(六) 14:00</small></div>
-            <div class="v"><a href="https://maps.app.goo.gl/t8HCntizY9qUTUrA8" target="_blank" rel="noopener">快樂小屋（台中）</a></div>
+            <div class="v"><a href="https://maps.app.goo.gl/t8HCntizY9qUTUrA8" target="_blank" rel="noopener">快樂小屋（台中）</a><span class="done">已完成</span></div>
           </div>
-          <a class="btn" href="https://www.facebook.com/JoyHouses" target="_blank" rel="noopener">報名</a>
+          <span class="btn off">已結束</span>
         </div>
-        <div class="session">
+        <div class="session past">
           <div>
             <div class="d">10 / 18 <small>(日) 14:00</small></div>
-            <div class="v"><a href="https://maps.app.goo.gl/CdW74P2tzYQBe3AEA" target="_blank" rel="noopener">ACCESS桌遊聖地（新北）</a></div>
+            <div class="v"><a href="https://maps.app.goo.gl/CdW74P2tzYQBe3AEA" target="_blank" rel="noopener">ACCESS桌遊聖地（新北）</a><span class="done">已完成</span></div>
           </div>
-          <a class="btn" href="https://lin.ee/5a3dLqt" target="_blank" rel="noopener">報名</a>
+          <span class="btn off">已結束</span>
         </div>
-        <div class="session">
+        <div class="session past">
           <div>
             <div class="d">10 / 18 <small>(日) 15:00</small></div>
-            <div class="v"><a href="https://maps.app.goo.gl/NXgHtc9t8WDDPxVx9" target="_blank" rel="noopener">桌遊老爹（台北）</a></div>
+            <div class="v"><a href="https://maps.app.goo.gl/NXgHtc9t8WDDPxVx9" target="_blank" rel="noopener">桌遊老爹（台北）</a><span class="done">已完成</span></div>
           </div>
-          <a class="btn" href="https://www.facebook.com/tgsbg" target="_blank" rel="noopener">報名</a>
+          <span class="btn off">已結束</span>
         </div>
-        <div class="session">
+        <div class="session past">
           <div>
             <div class="d">10 / 18 <small>(日) 16:00</small></div>
-            <div class="v"><a href="https://maps.app.goo.gl/frxgio7niRB6tMyJ7" target="_blank" rel="noopener">松鼠窩桌遊聚會空間（新北）</a></div>
+            <div class="v"><a href="https://maps.app.goo.gl/frxgio7niRB6tMyJ7" target="_blank" rel="noopener">松鼠窩桌遊聚會空間（新北）</a><span class="done">已完成</span></div>
           </div>
-          <a class="btn" href="https://www.facebook.com/profile.php?id=61556917814247" target="_blank" rel="noopener">報名</a>
+          <span class="btn off">已結束</span>
+        </div>
+        <div class="session past">
+          <div>
+            <div class="d">10 / 24 <small>(六) 17:00</small></div>
+            <div class="v"><a href="https://maps.app.goo.gl/RQfGwxz8VyCKRd3C9" target="_blank" rel="noopener">瓦屋桌遊（台中）</a><span class="done">已完成</span></div>
+          </div>
+          <span class="btn off">已結束</span>
+        </div>
+        <div class="session past">
+          <div>
+            <div class="d">10 / 30 <small>(五) 19:00</small></div>
+            <div class="v"><a href="https://maps.app.goo.gl/Bo6UhpwLZKnHccsx8" target="_blank" rel="noopener">華曜書局（台中）</a><span class="done">已完成</span></div>
+          </div>
+          <span class="btn off">已結束</span>
+        </div>
+        <div class="session past">
+          <div>
+            <div class="d">11 / 1 <small>(日) 14:00</small></div>
+            <div class="v"><a href="https://maps.app.goo.gl/RkJF2jkSZwe9PV726" target="_blank" rel="noopener">瘋桌遊台中南屯店（台中）</a><span class="done">已完成</span></div>
+          </div>
+          <span class="btn off">已結束</span>
+        </div>
+        <div class="session past">
+          <div>
+            <div class="d">11 / 1 <small>(日) 19:00</small></div>
+            <div class="v"><a href="https://maps.app.goo.gl/sjbUgGeYF6iw3STx6" target="_blank" rel="noopener">桌弄中原店（桃園）</a><span class="done">已完成</span></div>
+          </div>
+          <span class="btn off">已結束</span>
+        </div>
+        <div class="session past">
+          <div>
+            <div class="d">11 / 6 <small>(五) 20:00</small></div>
+            <div class="v"><a href="https://maps.app.goo.gl/t5s4YLwR2tMwyorA7" target="_blank" rel="noopener">陽光桌遊世界（台北）</a><span class="done">已完成</span></div>
+          </div>
+          <span class="btn off">已結束</span>
+        </div>
+        <div class="session past">
+          <div>
+            <div class="d">11 / 7 <small>(六) 14:00</small></div>
+            <div class="v"><a href="https://maps.app.goo.gl/KzoANSrWWEHXxeRD7" target="_blank" rel="noopener">漫果子花蓮店（花蓮）</a><span class="done">已完成</span></div>
+          </div>
+          <span class="btn off">已結束</span>
+        </div>
+        <div class="session past">
+          <div>
+            <div class="d">11 / 14 <small>(六) 14:00</small></div>
+            <div class="v"><a href="https://maps.app.goo.gl/cUj3hN4gPq7WyGCN6" target="_blank" rel="noopener">代代木樂園（台北）</a><span class="done">已完成</span></div>
+          </div>
+          <span class="btn off">已結束</span>
+        </div>
+        <div class="session past">
+          <div>
+            <div class="d">11 / 14 <small>(六) 19:00</small></div>
+            <div class="v"><a href="https://maps.app.goo.gl/M5PqFkwCfhKfryxR9" target="_blank" rel="noopener">玩逗樹（桃園）</a><span class="done">已完成</span></div>
+          </div>
+          <span class="btn off">已結束</span>
         </div>
         <div class="session">
           <div>
-            <div class="d">10 / 24 <small>(六) 14:00</small></div>
+            <div class="d">11 / 29 <small>(日) 13:00</small></div>
             <div class="v"><a href="https://maps.app.goo.gl/CZKGB7RPQLz1fLeu8" target="_blank" rel="noopener">骰子人（新北）</a></div>
           </div>
           <a class="btn" href="https://www.facebook.com/diceman.JingMei" target="_blank" rel="noopener">報名</a>
-        </div>
-        <div class="session">
-          <div>
-            <div class="d">10 / 24 <small>(六) 17:00</small></div>
-            <div class="v"><a href="https://maps.app.goo.gl/RQfGwxz8VyCKRd3C9" target="_blank" rel="noopener">瓦屋桌遊（台中）</a></div>
-          </div>
-          <a class="btn" href="https://sites.google.com/view/wowboardgame/index" target="_blank" rel="noopener">報名</a>
-        </div>
-        <div class="session">
-          <div>
-            <div class="d">10 / 30 <small>(五) 19:00</small></div>
-            <div class="v"><a href="https://maps.app.goo.gl/Bo6UhpwLZKnHccsx8" target="_blank" rel="noopener">華曜書局（台中）</a></div>
-          </div>
-          <a class="btn" href="https://lin.ee/3kz4oO0" target="_blank" rel="noopener">報名</a>
-        </div>
-        <div class="session">
-          <div>
-            <div class="d">11 / 1 <small>(日) 14:00</small></div>
-            <div class="v"><a href="https://maps.app.goo.gl/RkJF2jkSZwe9PV726" target="_blank" rel="noopener">瘋桌遊台中南屯店（台中）</a></div>
-          </div>
-          <a class="btn" href="https://www.facebook.com/tablegame.tc" target="_blank" rel="noopener">報名</a>
-        </div>
-        <div class="session">
-          <div>
-            <div class="d">11 / 1 <small>(日) 19:00</small></div>
-            <div class="v"><a href="https://maps.app.goo.gl/sjbUgGeYF6iw3STx6" target="_blank" rel="noopener">桌弄中原店（桃園）</a></div>
-          </div>
-          <a class="btn" href="https://www.facebook.com/drawNowKids" target="_blank" rel="noopener">報名</a>
-        </div>
-        <div class="session">
-          <div>
-            <div class="d">11 / 6 <small>(五) 20:00</small></div>
-            <div class="v"><a href="https://maps.app.goo.gl/t5s4YLwR2tMwyorA7" target="_blank" rel="noopener">陽光桌遊世界（台北）</a></div>
-          </div>
-          <a class="btn" href="https://www.facebook.com/sunnyboardgame" target="_blank" rel="noopener">報名</a>
-        </div>
-        <div class="session">
-          <div>
-            <div class="d">11 / 7 <small>(六) 14:00</small></div>
-            <div class="v"><a href="https://maps.app.goo.gl/KzoANSrWWEHXxeRD7" target="_blank" rel="noopener">漫果子花蓮店（花蓮）</a></div>
-          </div>
-          <a class="btn" href="https://www.facebook.com/share/14rjWAvLsHt/?mibextid=wwXIfr" target="_blank" rel="noopener">報名</a>
-        </div>
-        <div class="session">
-          <div>
-            <div class="d">11 / 14 <small>(六) 14:00</small></div>
-            <div class="v"><a href="https://maps.app.goo.gl/cUj3hN4gPq7WyGCN6" target="_blank" rel="noopener">代代木樂園（台北）</a></div>
-          </div>
-          <a class="btn" href="https://www.facebook.com/YoyogiLandBG" target="_blank" rel="noopener">報名</a>
-        </div>
-        <div class="session">
-          <div>
-            <div class="d">11 / 14 <small>(六) 19:00</small></div>
-            <div class="v"><a href="https://maps.app.goo.gl/M5PqFkwCfhKfryxR9" target="_blank" rel="noopener">玩逗樹（桃園）</a></div>
-          </div>
-          <a class="btn" href="https://www.facebook.com/wondertree320" target="_blank" rel="noopener">報名</a>
         </div>
       </div>
       <p class="fine">更多場次陸續公布。</p>
