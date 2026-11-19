@@ -272,6 +272,13 @@
   .tie .k { font-size: 12px; font-weight: 900; letter-spacing: .14em; color: var(--gold); }
   .tie .v { margin-top: 4px; font-weight: 800; }
   .tie .p { margin-top: 4px; }
+  .phase { margin-top: 26px; border: 3px solid var(--brown); padding: 0 16px 18px; }
+  .phase .ph { display: flex; justify-content: space-between; align-items: baseline; margin: 0 -16px; padding: 12px 16px; background: var(--yellow); }
+  .phase.dk .ph { background: var(--brown); color: #fff; }
+  .phase.dk .ph .tm { color: var(--yellow); }
+  .phase .ph .t { font-weight: 900; font-size: 24px; }
+  .phase .ph .tm { font-weight: 900; font-size: 15px; }
+  .phase .kicker { margin-top: 20px; font-size: 16px; }
 </style>
 </head>
 <body>
@@ -325,7 +332,7 @@
   </div>
 
   <nav class="jump">
-    <a href="#final">冠軍賽</a>
+    <a href="#final">冠軍賽(更新須知)</a>
     <a href="#signup">報名與退費</a>
     <a href="#notes">注意事項</a>
     <a href="#rules">比賽規章</a>
@@ -334,7 +341,7 @@
 
   <section id="final">
     <div class="shead dark">
-      <h2>冠軍賽</h2>
+      <h2>冠軍賽(更新須知)</h2>
       <span class="num">01</span>
     </div>
     <div class="sbody">
@@ -351,12 +358,11 @@
         <dd>各場預賽冠軍選手</dd>
       </dl>
 
-      <h3 class="kicker ruled">賽程</h3>
+      <h3 class="kicker ruled">時間表</h3>
       <div class="tl" style="margin-top:12px;">
-        <div class="slot rest"><span class="tm">13:00–13:30</span><span class="ev">報到</span></div>
+        <div class="slot rest"><span class="tm">13:00–13:30</span><span class="ev">選手報到</span></div>
         <div class="slot rest"><span class="tm">13:30–13:45</span><span class="ev">規則解說</span></div>
         <div class="slot"><span class="tm">13:45–14:45</span><span class="ev">準決賽<small>30 組・10 題</small></span></div>
-        <div class="slot rest"><span class="tm">14:45–15:00</span><span class="ev">中場休息</span></div>
         <div class="slot"><span class="tm">15:00–16:00</span><span class="ev">決賽<small>10 組・10 題</small></span></div>
       </div>
       <div class="funnel">
@@ -367,54 +373,67 @@
         <div class="b dk"><div class="v">4<small> 組</small></div><div class="l">頒獎</div></div>
       </div>
 
-      <h3 class="kicker ruled">每題流程</h3>
-      <div class="flow">
-        <span>1 播放歌曲</span>
-        <span>2 秘密作答</span>
-        <span>3 時間到停筆</span>
-        <span>4 公布答案</span>
-      </div>
-      <ol class="plain">
-        <li>每組領取一張作答紙，主持人播放歌曲。</li>
-        <li>根據聽到的歌曲，在作答紙上<strong>秘密</strong>寫下：<strong>① 發行區間</strong>（落在場上哪兩張時間卡之間）、<strong>② 歌手＋歌名</strong>。</li>
-        <li>主持人宣布時間到，所有組別停止作答。</li>
-        <li>公布正確答案，由裁判紀錄各組分數。</li>
-      </ol>
+      <div class="phase">
+        <div class="ph"><span class="t">準決賽</span><span class="tm">13:45–14:45</span></div>
 
-      <h3 class="kicker ruled">計分方式</h3>
-      <div class="score">
-        <div class="a"><div class="num">+2<small> 分</small></div><div class="l">發行區間正確</div></div>
-        <div class="b"><div class="num">+1<small> 分</small></div><div class="l">歌手＋歌名正確</div></div>
-      </div>
-      <p class="fine">每題最高 3 分，準決賽與決賽計分相同。</p>
-
-      <h3 class="kicker ruled">準決賽與決賽</h3>
-      <div class="rounds">
-        <div>
-          <div class="tm">13:45–14:45</div>
-          <div class="t">準決賽</div>
-          <ul>
-            <li>30 組參賽</li>
-            <li>共 10 題</li>
-            <li>場上初始 <strong>3 張</strong>時間卡</li>
-            <li>總分<strong>前 10 名</strong>晉級</li>
-          </ul>
+        <h3 class="kicker">設置</h3>
+        <p class="p">初始場上已有 <strong>3 張</strong>時間卡。每組會拿到：</p>
+        <div class="kit">
+          <div class="r"><span class="a">１</span><span>編號卡</span></div>
+          <div class="r"><span class="a">２</span><span>作答紙</span></div>
+          <div class="r"><span class="a">３</span><span>一枝筆</span></div>
         </div>
-        <div class="dk">
-          <div class="tm">15:00–16:00</div>
-          <div class="t">決賽</div>
-          <ul>
-            <li>10 組參賽</li>
-            <li>共 10 題</li>
-            <li>場上初始 <strong>4 張</strong>時間卡</li>
-            <li>總分<strong>前 4 名</strong>頒獎</li>
-          </ul>
+
+        <h3 class="kicker">每題流程（共 10 題）</h3>
+        <ol class="plain">
+          <li>根據聽到的歌曲，在作答紙上<strong>秘密</strong>寫下：<strong>① 發行區間</strong>、<strong>② 歌手＋歌名</strong>。</li>
+          <li>時間到，停止作答。</li>
+          <li>公布正確答案，由裁判紀錄分數（共 30 組）。</li>
+          <li>將歌曲卡放入時間軸中，進行下一題。</li>
+        </ol>
+
+        <h3 class="kicker">計分方式</h3>
+        <div class="score">
+          <div class="a"><div class="num">+2<small> 分</small></div><div class="l">發行區間正確</div></div>
+          <div class="b"><div class="num">+1<small> 分</small></div><div class="l">歌手及歌名正確</div></div>
+        </div>
+        <p class="fine">歌手及歌名<strong>兩個都正確</strong>才得 1 分，其中一個錯誤不得分。</p>
+
+        <h3 class="kicker">晉級</h3>
+        <p class="p">全部題目結束後，<strong>全場分數前 10 名</strong>晉級決賽。</p>
+        <div class="tie">
+          <div class="k">平手情況</div>
+          <p class="p">若因平手造成前十名超過 10 組（例如第 10 名與第 11 名分數相同），則額外進行<strong>搶答</strong>，直到分出前十名。</p>
         </div>
       </div>
-      <div class="tie">
-        <div class="k">平手處理</div>
-        <div class="v">搶答題 × 1</div>
-        <p class="p">準決賽晉級名額出現同分時，以一題搶答題決定晉級。</p>
+
+      <div class="phase dk">
+        <div class="ph"><span class="t">決賽</span><span class="tm">15:00–16:00</span></div>
+
+        <h3 class="kicker">設置</h3>
+        <p class="p">初始場上已有 <strong>4 張</strong>時間卡，每組拿到作答紙。</p>
+
+        <h3 class="kicker">每題流程（共 10 題）</h3>
+        <ol class="plain">
+          <li>根據聽到的歌曲，在作答紙上<strong>秘密</strong>寫下：<strong>① 發行時間</strong>、<strong>② 歌手＋歌名</strong>。</li>
+          <li>時間到，停止作答。</li>
+          <li>公布正確答案，由裁判紀錄分數。</li>
+          <li>將歌曲卡放入時間軸中，進行下一題。</li>
+        </ol>
+
+        <h3 class="kicker">計分方式</h3>
+        <div class="score">
+          <div class="a"><div class="num">+5<small> 分</small></div><div class="l">發行時間正確</div></div>
+          <div class="b"><div class="num">+1<small> 分</small></div><div class="l">歌手及歌名正確</div></div>
+        </div>
+        <p class="fine">發行時間<strong>每相差一年 −1 分</strong>，最低 0 分（例：正確為 1998 年，寫 1996 年得 3 分）。歌手及歌名<strong>兩個都正確</strong>才得 1 分，其中一個錯誤不得分。</p>
+
+        <h3 class="kicker">比賽結果</h3>
+        <p class="p">全部題目結束後，<strong>分數前 4 名</strong>頒發獎品。</p>
+        <div class="tie">
+          <div class="k">平手情況</div>
+          <p class="p">前四名若有平手（例如第 2、3 名平手，或第 4、5 名平手），則平手組額外進行<strong>搶答</strong>，直到分出名次。</p>
+        </div>
       </div>
 
       <h3 class="kicker ruled">獎項</h3>
